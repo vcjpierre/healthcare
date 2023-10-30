@@ -14,22 +14,16 @@ class DefaultServiceCategorySeeder extends Seeder
     {
         $input = [
             [
-                'name' => 'Dentist',
+                'name' => 'Dentista',
             ],
             [
-                'name' => 'Dieticians',
+                'name' => 'Médicos generales',
             ],
             [
-                'name' => 'General Physicians',
+                'name' => 'Fisioterapia',
             ],
             [
-                'name' => 'Gynecologists',
-            ],
-            [
-                'name' => 'physiotherapy',
-            ],
-            [
-                'name' => 'Psychologist',
+                'name' => 'Psicólogo',
             ],
         ];
 

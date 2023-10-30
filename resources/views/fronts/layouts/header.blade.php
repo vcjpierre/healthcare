@@ -16,27 +16,27 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav align-items-center py-2 py-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link {{ Request::is('/*') ? 'active' : '' }}" aria-current="page" href="{{ url('/') }}">{{ __('messages.web.home') }}</a>
+                                <a class="nav-link {{ Request::is('/*') ? 'active' : '' }}" aria-current="page" href="{{ url('/') }}">Inicio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('medical-doctors*') ? 'active' : '' }}"
-                                   href="{{ route('medicalDoctors') }}">{{ __('messages.web.our_team') }}</a>
+                                   href="{{ route('medicalDoctors') }}">Nuestro equipo</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('medical-services*') ? 'active' : '' }}"
-                                   href="{{ route('medicalServices') }}">{{ __('messages.web.services') }}</a>
+                                   href="{{ route('medicalServices') }}">Servicios</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('medical-about-us*') ? 'active' : '' }}"
-                                   href="{{ route('medicalAboutUs') }}">{{ __('messages.web.about_us') }}</a>
+                                   href="{{ route('medicalAboutUs') }}">Sobre nosotros</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('medical-contact*') ? 'active' : '' }}"
                                    href="{{ route('medicalContact') }}"
-                                   data-turbo="false">{{ __('messages.web.contact_us') }}</a>
+                                   data-turbo="false">Contacto</a>
                             </li>
 
-                            <li class="nav-item dropdown">
+                            {{-- <li class="nav-item dropdown">
                                 <a href="javascript:void(0)" class="nav-link" id="dropdownMenuLink"
                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-language me-1"></i>{{getCurrentLanguageName()}}</a>
@@ -59,26 +59,26 @@
                                         </ul>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> --}}
                         </ul>
                         <div class="text-lg-end header-btn-grp ms-xxl-5 ms-lg-3">
                                 @if(getLogInUser())
                                     @if(getLogInUser()->hasRole('doctor'))
                                         <a href="{{ route('doctors.dashboard') }}"
-                                           class="btn btn-outline-primary me-xxl-3 me-2 mb-3 mb-lg-0" data-turbo="false">{{ __('messages.dashboard') }}</a>
+                                           class="btn btn-outline-primary me-xxl-3 me-2 mb-3 mb-lg-0" data-turbo="false">Panel de control</a>
                                     @elseif(getLogInUser()->hasRole('patient'))
                                         <a href="{{ route('patients.dashboard') }}"
-                                           class="btn btn-outline-primary me-xxl-3 me-2 mb-3 mb-lg-0" data-turbo="false">{{ __('messages.dashboard') }}</a>
+                                           class="btn btn-outline-primary me-xxl-3 me-2 mb-3 mb-lg-0" data-turbo="false">Panel de control</a>
                                     @else
                                         <a href="{{ route('admin.dashboard') }}"
-                                           class="btn btn-outline-primary me-xxl-3 me-2 mb-3 mb-lg-0" data-turbo="false">{{ __('messages.dashboard') }}</a>
+                                           class="btn btn-outline-primary me-xxl-3 me-2 mb-3 mb-lg-0" data-turbo="false">Panel de control</a>
                                     @endif
                                 @else
                                     <a href="{{ route('login') }}"
-                                       class="btn btn-outline-primary me-xxl-3 me-2 mb-3 mb-lg-0" data-turbo="false">{{ __('messages.login') }}</a>
+                                       class="btn btn-outline-primary me-xxl-3 me-2 mb-3 mb-lg-0" data-turbo="false">Iniciar sesión</a>
                                 @endif
 
-                                    <a href="{{ route('medicalAppointment') }}" class="btn btn-primary mb-3 mb-lg-0">{{ __('messages.web.book_an_appointment') }}</a>
+                                    <a href="{{ route('medicalAppointment') }}" class="btn btn-primary mb-3 mb-lg-0">Reserve una cita</a>
                         </div>
                     </div>
                 </nav>

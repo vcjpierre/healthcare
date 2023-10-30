@@ -56,7 +56,7 @@ class PatientAppointmentTable extends LivewireTableComponent
     public function builder(): Builder
     {
         $query = Appointment::with([
-            'doctor.user', 'services', 'transaction', 'doctor.reviews',
+            'doctor.user', 'services', 'transaction',
         ])->where('patient_id', getLoginUser()->patient->id)->select('appointments.*');
 
         $query->when($this->statusFilter != '' && $this->statusFilter != Appointment::ALL_STATUS,

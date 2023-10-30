@@ -84,7 +84,7 @@
             </span>
         </div>
     </div>
-    <div class="col-md-6 mb-5">
+    {{-- <div class="col-md-6 mb-5">
         <label class="form-label">{{ __('messages.patient.blood_group').':' }}</label>
         {{ Form::select('blood_group', $bloodGroup , null, ['class' => 'io-select2 form-select', 'data-control'=>"select2",'placeholder' => __('messages.patient.blood_group')]) }}
     </div>
@@ -99,7 +99,7 @@
     <div class="col-md-6 mb-5">
         {{ Form::label('instagram',__('messages.doctor.instagram').':' ,['class' => 'form-label']) }}
         {{ Form::text('instagram_url', null,['class' => 'form-control','placeholder' => __('messages.common.instagram_url'), 'id' => 'instagramUrl']) }}
-    </div>
+    </div> --}}
     <div class="col-lg-6">
         <div class="mb-5">
             <div class="mb-3" io-image-input="true">

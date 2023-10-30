@@ -128,7 +128,7 @@
                                 {{ __('messages.user.account_setting') }}
                             </a>
                         </li>
-                        @if((is_impersonating() === false))
+                        {{-- @if((is_impersonating() === false))
                             <li>
                                 <a class="dropdown-item text-gray-900" id="changePassword" href="javascript:void(0)">
                                     <span class="dropdown-icon me-4 text-gray-600">
@@ -137,8 +137,8 @@
                                     {{ __('messages.user.change_password') }}
                                 </a>
                             </li>
-                        @endif
-                        @if(getLogInUser()->hasRole('doctor') || getLogInUser()->hasRole('patient'))
+                        @endif --}}
+                        {{-- @if(getLogInUser()->hasRole('doctor') || getLogInUser()->hasRole('patient'))
                         <li>
                             <a class="dropdown-item text-gray-900" id="emailNotification" href="javascript:void(0)">
                                     <span class="dropdown-icon me-4 text-gray-600">
@@ -147,7 +147,7 @@
                                 {{ __('messages.user.email_notification') }}
                             </a>
                         </li>
-                        @endif
+                        @endif --}}
                         @if(session('impersonated_by'))
                         <li>
                             <a class="dropdown-item text-gray-900" href="{{ route('impersonate.leave') }}"
@@ -159,14 +159,14 @@
                             </a>
                         </li>
                         @endif
-                        <li>
+                        {{-- <li>
                             <a class="dropdown-item text-gray-900" id="changeLanguage" href="javascript:void(0)">
                                <span class="dropdown-icon me-4 text-gray-600">
                                    <i class="fa-solid fa-globe"></i>
                                </span>
                                 {{ __('messages.user.change_language') }}
                             </a>
-                        </li>
+                        </li> --}}
                         <li>
                             <a class="dropdown-item text-gray-900 d-flex" href="javascript:void(0)">
                                 <span class="dropdown-icon me-4 text-gray-600">

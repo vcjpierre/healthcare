@@ -15,71 +15,71 @@ class DefaultPermissionSeeder extends Seeder
         $permissions = [
             [
                 'name' => 'manage_doctors',
-                'display_name' => 'Manage Doctors',
+                'display_name' => 'Gestionar medicos',
             ],
             [
                 'name' => 'manage_patients',
-                'display_name' => 'Manage Patients',
+                'display_name' => 'Gestionar pacientes',
             ],
             [
                 'name' => 'manage_appointments',
-                'display_name' => 'Manage Appointments',
+                'display_name' => 'Gestionar citas',
             ],
             [
                 'name' => 'manage_patient_visits',
-                'display_name' => 'Manage Patient Visits',
+                'display_name' => 'Gestionar visitas de pacientes',
             ],
             [
                 'name' => 'manage_staff',
-                'display_name' => 'Manage Staff',
+                'display_name' => 'Gestionar personal',
             ],
             [
                 'name' => 'manage_doctor_sessions',
-                'display_name' => 'Manage Doctor Sessions',
+                'display_name' => 'Gestionar las sesiones médicas',
             ],
             [
                 'name' => 'manage_settings',
-                'display_name' => 'Manage Settings',
+                'display_name' => 'Gestionar ajustes',
             ],
             [
                 'name' => 'manage_services',
-                'display_name' => 'Manage Services',
+                'display_name' => 'Gestionar servicios',
             ],
             [
                 'name' => 'manage_specialities',
-                'display_name' => 'Manage Specialities',
+                'display_name' => 'Gestionar especialidades',
             ],
             [
                 'name' => 'manage_countries',
-                'display_name' => 'Manage Countries',
+                'display_name' => 'Gestionar paises',
             ],
             [
                 'name' => 'manage_states',
-                'display_name' => 'Manage States',
+                'display_name' => 'Gestionar estados',
             ],
             [
                 'name' => 'manage_cities',
-                'display_name' => 'Manage Cities',
+                'display_name' => 'Gestionar ciudades',
             ],
             [
                 'name' => 'manage_roles',
-                'display_name' => 'Manage Roles',
+                'display_name' => 'Gestionar roles',
             ],
             [
                 'name' => 'manage_currencies',
-                'display_name' => 'Manage Currencies',
+                'display_name' => 'Gestionar monedas',
             ],
             [
                 'name' => 'manage_admin_dashboard',
-                'display_name' => 'Manage Admin Dashboard',
+                'display_name' => 'Gestionar Admin Dashboard',
             ],
             [
                 'name' => 'manage_front_cms',
-                'display_name' => 'Manage Front CMS',
+                'display_name' => 'Gestionar Front',
             ],
             [
                 'name' => 'manage_transactions',
-                'display_name' => 'Manage Transactions',
+                'display_name' => 'Gestionar transacciones',
             ],
         ];
 

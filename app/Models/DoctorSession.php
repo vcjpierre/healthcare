@@ -64,30 +64,30 @@ class DoctorSession extends Model
     const FEMALE = 2;
 
     const GENDER = [
-        self::MALE => 'Male',
-        self::FEMALE => 'Female',
+        self::MALE => 'Hombre',
+        self::FEMALE => 'Mujer',
     ];
 
     const GAPS = [
-        '5' => '5 minutes',
-        '10' => '10 minutes',
-        '15' => '15 minutes',
-        '20' => '20 minutes',
-        '25' => '25 minutes',
-        '30' => '30 minutes',
-        '45' => '45 minutes',
-        '60' => '1 hour',
+        '5' => '5 minutos',
+        '10' => '10 minutos',
+        '15' => '15 minutos',
+        '20' => '20 minutos',
+        '25' => '25 minutos',
+        '30' => '30 minutos',
+        '45' => '45 minutos',
+        '60' => '1 hora',
     ];
 
     const SESSION_MEETING_TIME = [
-        '5' => '5 minutes',
-        '10' => '10 minutes',
-        '15' => '15 minutes',
-        '30' => '30 minutes',
-        '45' => '45 minutes',
-        '60' => '1 hour',
-        '90' => '1.5 hour',
-        '120' => '2 hour',
+        '5' => '5 minutos',
+        '10' => '10 minutos',
+        '15' => '15 minutos',
+        '30' => '30 minutos',
+        '45' => '45 minutos',
+        '60' => '1 hora',
+        '90' => '1.5 hora',
+        '120' => '2 horas',
     ];
 
     /**

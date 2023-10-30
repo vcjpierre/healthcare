@@ -57,7 +57,7 @@
                          'data-control'=>'select2','required']) }}
                     </div>
                 </div>
-                <div class="row mb-6">
+                {{-- <div class="row mb-6">
                         <label for="appLogoPreview" class="col-lg-4 required form-label">{{ __('messages.setting.logo').':'}}</label>
                     <div class="col-lg-8">
                         <div class="mb-3" io-image-input="true">
@@ -78,8 +78,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row mb-6">
+                </div> --}}
+                {{-- <div class="row mb-6">
                     <label for="faviconPreview"
                            class="col-lg-4 required form-label"> {{__('messages.setting.favicon'). ':'}}</label>
                     <div class="col-lg-8">
@@ -102,8 +102,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row mb-6">
+                </div> --}}
+                {{-- <div class="row mb-6">
                     <label class="col-lg-4 form-label required">
                         <span>{{__('messages.setting.do_not_allow_to_login_without_email_verification')}}:</span>
                         <span data-bs-toggle="tooltip"
@@ -115,16 +115,16 @@
                     <div class="col-lg-8">
                         {{ Form::checkbox('email_verified', 1, $setting['email_verified'], ['class' => 'form-check-input m-0']) }}
                     </div>
-                </div>
+                </div> --}}
 
-                <div class="card-header px-0">
+                {{-- <div class="card-header px-0">
                     <div class="d-flex align-items-center justify-content-center">
                         <h3 class="m-0">{{__('messages.setting.currency_settings')}}
                         </h3>
                     </div>
-                </div>
+                </div> --}}
 
-                <div class="row">
+                {{-- <div class="row">
                     <div class="row mb-6">
                         <label class="col-lg-4 form-label">
                             {{ Form::label('currency',__('messages.setting.currency').':',['class'=>'col-lg-4 form-label']) }}
@@ -136,8 +136,8 @@
                         </div>
                     </div>
 
-                </div>
-                <div class="card-header px-0">
+                </div> --}}
+                {{-- <div class="card-header px-0">
                     <div class="d-flex align-items-center justify-content-center">
                         <h3 class="m-0">{{__('messages.appointment.payment_method')}}
                         </h3>
@@ -167,7 +167,7 @@
                             </table>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="row">
                     <!-- Submit Field -->
                     <div class="form-group col-sm-12">

@@ -13,12 +13,12 @@
                 <div class="col-12">
                     <div class="hero-content text-center">
                         <h1 class="mb-3">
-                            {{ __('messages.web.book_appointment') }}
+                            Reservar una cita
                         </h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center mb-0">
-                                <li class="breadcrumb-item"><a href="{{ route('medical') }}">  {{ __('messages.web.home') }}</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">  {{ __('messages.web.book_appointment') }}</li>
+                                <li class="breadcrumb-item"><a href="{{ route('medical') }}">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">  Reservar una cita</li>
                             </ol>
                         </nav>
                     </div>

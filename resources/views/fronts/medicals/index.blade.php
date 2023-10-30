@@ -1,6 +1,6 @@
 @extends('fronts.layouts.app')
 @section('front-title')
-    {{ __('messages.web.medical') }}
+    Bienvenido
 @endsection
 @section('front-content')
     @php

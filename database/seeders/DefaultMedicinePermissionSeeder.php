@@ -22,7 +22,7 @@ class DefaultMedicinePermissionSeeder extends Seeder
             $permission = Permission::create(
                 [
                     'name' => 'manage_medicines',
-                    'display_name' => 'Manage Medicines',
+                    'display_name' => 'Gestionar los medicamentos',
                 ],
             );
             foreach ($roles2 as $role) {

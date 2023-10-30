@@ -16,6 +16,7 @@
                                 </div>
                                 <div class="text-end text-white">
                                     <h2 class="fs-1-xxl fw-bolder text-white">{{$data['totalDoctorCount']}}</h2>
+                                    {{-- Doctores activos --}}
                                     <h3 class="mb-0 fs-4 fw-light">{{__('messages.purchase_medicine.total').' '.__('messages.common.active').' '.__('messages.doctors')}}</h3>
                                 </div>
                             </div>
@@ -30,6 +31,7 @@
                                         <i class="fas fa-hospital-user display-4 card-icon text-white hospital-user-dark-mode"></i>
                                     </div>
                                     <div class="text-end text-white">
+                                        {{-- Total de pacientes --}}
                                         <h2 class="fs-1-xxl fw-bolder text-white">{{$data['totalPatientCount']}}</h2>
                                         <h3 class="mb-0 fs-4 fw-light">{{__('messages.admin_dashboard.total_patients')}}</h3>
                                     </div>
@@ -45,6 +47,7 @@
                                         <i class="fas fa-calendar-alt display-4 card-icon text-white"></i>
                                     </div>
                                     <div class="text-end text-white">
+                                        {{-- Citas hoy --}}
                                         <h2 class="fs-1-xxl fw-bolder text-white">{{$data['todayAppointmentCount']}}</h2>
                                         <h3 class="mb-0 fs-4 fw-light">{{__('messages.admin_dashboard.today_appointments')}}</h3>
                                     </div>
@@ -55,9 +58,10 @@
                             <a href="{{ route('patients.index') }}" class="text-decoration-none">
                                 <div class="bg-info rounded-10 p-xxl-10 px-7 py-10 d-flex align-items-center justify-content-between my-3">
                                     <div class="bg-blue-300 widget-icon rounded-10 d-flex align-items-center justify-content-center">
-                                        <i class="fas fa-user-injured display-4 card-icon text-white"></i>
+                                        <i class="fas fa-user display-4 card-icon text-white"></i>
                                     </div>
                                     <div class="text-end text-white">
+                                        {{-- Pacientes registrados hoy --}}
                                         <h2 class="fs-1-xxl fw-bolder text-white">{{$data['totalRegisteredPatientCount']}}</h2>
                                         <h3 class="mb-0 fs-4 fw-light">{{__('messages.admin_dashboard.today_registered_patients')}}</h3>
                                     </div>
@@ -67,10 +71,9 @@
 
                     </div>
                 </div>
-                <div class="col-xl-12">
-                    <!--begin::Charts Widget 8-->
+                {{-- Ganancias de citas --}}
+                {{-- <div class="col-xl-12">
                     <div class="card card-xl-stretch mb-5 mb-xl-8">
-                        <!--begin::Header-->
                         <div class="card-header border-0 pt-5">
                             <h3 class="card-title align-items-start flex-column mb-3">
                                 <span class="card-label fw-bolder fs-3 mb-1">{{ __('messages.admin_dashboard.earnings_from_appointments') }}
@@ -78,7 +81,6 @@
                                         class="card-label fw-bolder fs-3 mb-1 me-0 totalEarning"></span>)
                                 </span>
                             </h3>
-                            <!--begin::Toolbar-->
                             <div class="ms-0 ms-md-2">
                                 <div class="dropdown d-flex align-items-center me-4 me-md-5">
                                     <button
@@ -106,27 +108,20 @@
                                                 {{ Form::select('doctor_id',$data['doctorArr'],null,['class' => 'form-select io-select2','placeholder' => __('messages.common.select_doctor'), 'id' => 'dashboardDoctorId','data-control'=>'select2']) }}
                                             </div>
                                             <div class="d-flex justify-content-end">
-{{--                                                <button type="submit" class="btn btn-primary me-5">{{__('messages.common.apply')}}</button>--}}
+                                                <button type="submit" class="btn btn-primary me-5">{{__('messages.common.apply')}}</button>
                                                 <button type="reset" class="btn btn-secondary" id="dashboardResetBtn">{{__('messages.common.reset')}}</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!--end::Toolbar-->
                         </div>
-                        <!--end::Header-->
-                        <!--begin::Body-->
                         <div class="card-body appointmentChart">
                             {{Form::hidden('admin_chart_data',json_encode($appointmentChartData,true) ,['id' => 'adminChartData'])}}
-                            <!--begin::Chart-->
                             <div id="appointmentChartId" style="height: 350px" class="card-rounded-bottom"></div>
-                            <!--end::Chart-->
                         </div>
-                        <!--end::Body-->
                     </div>
-                    <!--end::Charts Widget 8-->
-                </div>
+                </div> --}}
                 <div class="col-xxl-12">
                         <div class="d-flex border-0 pt-5">
                             <h3 class="align-items-start flex-column">
@@ -193,10 +188,8 @@
                                                             </div>
                                                             <div class="d-flex flex-column">
                                                                 <a href="{{ route('patients.show',$patient->id) }}"
-                                                                   class="text-primary-800 mb-1 fs-6 text-decoration-none
-">{{$patient->user->fullname}}</a>
-                                                                <span
-                                                                        class="text-muted fw-bold d-block">{{$patient->user->email}}</span>
+                                                                   class="text-primary-800 mb-1 fs-6 text-decoration-none">{{$patient->user->fullname}}</a>
+                                                                <span class="text-muted fw-bold d-block">{{$patient->user->email}}</span>
                                                             </div>
                                                         </div>
                                                     </td>

@@ -14,14 +14,9 @@ class DefaultCurrenciesSeeder extends Seeder
     {
         $input = [
             [
-                'currency_name' => 'United states dollar',
-                'currency_icon' => '$',
-                'currency_code' => 'USD',
-            ],
-            [
-                'currency_name' => 'Indian rupee',
-                'currency_icon' => '₹',
-                'currency_code' => 'INR',
+                'currency_name' => 'Boliviano',
+                'currency_icon' => 'Bs',
+                'currency_code' => 'BOB',
             ],
         ];
 

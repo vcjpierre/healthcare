@@ -17,7 +17,7 @@
         </div>
         <div class="bg-white rounded-15 shadow-md width-540 px-5 px-sm-7 py-10 mx-auto mx-auto">
             <h1 class="text-center mb-7">{{__('messages.web.forgot_password').' ?'}}</h1>
-            <div class="fs-4 mb-4 text-center mb-5">{{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}</div>
+            <div class="fs-4 mb-4 text-center mb-5">{{ __('¿Ha olvidado su contraseña? No se preocupe. Indíquenos su dirección de correo electrónico y le enviaremos un enlace para restablecer la contraseña que le permitirá elegir una nueva.') }}</div>
             <form class="form w-100" method="POST" action="{{ route('password.email') }}">
                 @csrf
                 <div class="row">
@@ -34,7 +34,7 @@
                     <!-- Submit Field -->
                     <div class="form-group col-sm-12 d-flex text-start align-items-center">
                         <button type="submit" class="btn btn-primary">
-                            <span class="indicator-label"> {{ __('messages.email_password_reset_link') }}</span>
+                            <span class="indicator-label"> {{ __('messages.common.email_password_reset_link') }}</span>
                         </button>
 
                         <a href="{{ route('login') }}"

@@ -107,11 +107,11 @@ class Appointment extends Model
     const CANCELLED = 4;
 
     const STATUS = [
-        self::ALL => 'All',
-        self::BOOKED => 'Booked',
+        self::ALL => 'Todos',
+        self::BOOKED => 'Reservado',
         self::CHECK_IN => 'Check In',
         self::CHECK_OUT => 'Check Out',
-        self::CANCELLED => 'Cancelled',
+        self::CANCELLED => 'Cancelado',
     ];
 
     const ALL_STATUS = [
@@ -143,9 +143,9 @@ class Appointment extends Model
     ];
 
     const PAYMENT_TYPE_ALL = [
-        self::ALL_PAYMENT => 'All',
-        self::PENDING => 'Pending',
-        self::PAID => 'Paid',
+        self::ALL_PAYMENT => 'Todos',
+        self::PENDING => 'Pendiente',
+        self::PAID => 'Pagado',
     ];
 
     const MANUALLY = 1;
@@ -163,7 +163,7 @@ class Appointment extends Model
     const PAYTM = 7;
 
     const PAYMENT_METHOD = [
-        self::MANUALLY => 'Manually',
+        self::MANUALLY => 'Efectivo',
         self::STRIPE => 'Stripe',
         self::PAYSTACK => 'Paystack',
         self::PAYPAL => 'Paypal',

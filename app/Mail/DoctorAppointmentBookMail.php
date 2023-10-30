@@ -33,7 +33,7 @@ class DoctorAppointmentBookMail extends Mailable
         $service = $this->data['service'];
         $time = $this->data['original_from_time'].' - '.$this->data['original_to_time'];
         $date = Carbon::createFromFormat('Y-m-d', $this->data['date'])->format('dS,M Y');
-        $subject = 'Appointment Booked Successfully';
+        $subject = 'Cita reservada con éxito';
 
         return $this->view('emails.doctor_appointment_booked_mail',
             compact('name', 'time', 'date', 'patientName', 'service'))

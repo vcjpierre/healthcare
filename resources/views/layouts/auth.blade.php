@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,6 +20,12 @@
 
     <!-- CSS Libraries -->
     @stack('css')
+    <script data-turbo-eval="false">
+        let currencyIcon = '{{ getCurrencyIcon() }}'
+        let isSetFirstFocus = false
+        let csrfToken = "{{ csrf_token() }}"
+        let defaultCountryCodeValue = "{{ getSettingValue('default_country_code') }}"
+    </script>
 </head>
 
 <body
@@ -36,9 +42,10 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-xl-6">
                 <div class="copyright text-center text-muted">
-                    {{ __('messages.all_rights_reserved') }} &copy; {{ date('Y') }} <a href="/"
-                                                                  class="font-weight-bold ml-1"
-                                                                      target="_blank">{{ getAppName() }}</a>
+                    {{ __('messages.all_rights_reserved') }} &copy; {{ date('Y') }} 
+                        <a href="/" class="font-weight-bold ml-1"
+                            target="_blank">{{ getAppName() }}
+                        </a>
                     </div>
                 </div>
             </div>

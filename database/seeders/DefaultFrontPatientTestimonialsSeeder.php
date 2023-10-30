@@ -20,13 +20,6 @@ class DefaultFrontPatientTestimonialsSeeder extends Seeder
                 'profile' => asset('assets/front/images/testimonials/testimonial-1.jpg'),
                 'is_default' => true,
             ],
-            [
-                'name' => 'COLLIS TA\'EED',
-                'designation' => 'Envato Inc.',
-                'short_description' => 'Natus voluptatum enim quod necessitatibus quis expedita harum provident eos obcaecati id culpa corporis molestias.',
-                'profile' => asset('assets/front/images/testimonials/testimonial-2.jpg'),
-                'is_default' => true,
-            ],
         ];
 
         foreach ($inputs as $input) {

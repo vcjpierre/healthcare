@@ -59,7 +59,7 @@
         </a>
     </li>
         @endcan
-    <li class="nav-item {{ Request::is('doctors/live-consultations*') ? 'active' : '' }}">
+    {{-- <li class="nav-item {{ Request::is('doctors/live-consultations*') ? 'active' : '' }}">
         <a class="nav-link d-flex align-items-center py-4" aria-current="page"
             href="{{ route('doctors.live-consultations.index') }}">
             <span class="aside-menu-icon pe-3"><i class="fas fa-video"></i></span>
@@ -79,7 +79,7 @@
             <span class="aside-menu-icon pe-3"><i class="fa-solid fa-calendar-xmark"></i></span>
             <span class="aside-menu-title">{{ __('messages.holiday.holiday') }}</span>
         </a>
-    </li>
+    </li> --}}
 @endrole
 @role('patient')
     <li class="nav-item {{ Request::is('patients/dashboard*') ? 'active' : '' }}">
@@ -98,45 +98,45 @@
         </a>
     </li>
 
-    <li class="nav-item {{ Request::is('patients/transactions*') ? 'active' : '' }}">
+    {{-- <li class="nav-item {{ Request::is('patients/transactions*') ? 'active' : '' }}">
         <a class="nav-link d-flex align-items-center py-4" aria-current="page"
             href="{{ route('patients.transactions') }}">
             <span class="aside-menu-icon pe-3"><i class="fas fa-money-bill-wave"></i></span>
             <span class="aside-menu-title">{{ __('messages.transactions') }}</span>
         </a>
-    </li>
+    </li> --}}
 
-    <li class="nav-item {{ Request::is('patients/reviews*') ? 'active' : '' }}">
+    {{-- <li class="nav-item {{ Request::is('patients/reviews*') ? 'active' : '' }}">
         <a class="nav-link d-flex align-items-center py-4" aria-current="page"
             href="{{ route('patients.reviews.index') }}">
             <span class="aside-menu-icon pe-3"><i class="fas fa-star"></i></span>
             <span class="aside-menu-title">{{ __('messages.reviews') }}</span>
         </a>
-    </li>
+    </li> --}}
 
-    <li class="nav-item {{ Request::is('patients/patient-visits*') ? 'active' : '' }}">
+    {{-- <li class="nav-item {{ Request::is('patients/patient-visits*') ? 'active' : '' }}">
         <a class="nav-link d-flex align-items-center py-4" aria-current="page"
             href="{{ route('patients.patient.visits.index') }}">
             <span class="aside-menu-icon pe-3"><i class="fas fa-procedures"></i></span>
             <span class="aside-menu-title">{{ __('messages.visits') }}</span>
         </a>
-    </li>
+    </li> --}}
 
-    <li class="nav-item {{ Request::is('patients/live-consultation*') ? 'active' : '' }}">
+    {{-- <li class="nav-item {{ Request::is('patients/live-consultation*') ? 'active' : '' }}">
         <a class="nav-link d-flex align-items-center py-4" aria-current="page"
             href="{{ route('patients.live-consultations.index') }}">
             <span class="aside-menu-icon pe-3"><i class="fas fa-video"></i></span>
             <span class="aside-menu-title">{{ __('messages.live_consultations') }}</span>
         </a>
-    </li>
+    </li> --}}
 
-    <li class="nav-item {{ Request::is('patients/connect-google-calendar*') ? 'active' : '' }}">
+    {{-- <li class="nav-item {{ Request::is('patients/connect-google-calendar*') ? 'active' : '' }}">
         <a class="nav-link d-flex align-items-center py-4" aria-current="page"
             href="{{ route('patients.googleCalendar.index') }}">
             <span class="aside-menu-icon pe-3"><i class="fas fa-calendar-day"></i></span>
             <span class="aside-menu-title">{{ __('messages.setting.connect_google_calendar') }}</span>
         </a>
-    </li>
+    </li> --}}
 @endrole
 @can('manage_doctors')
     <li
@@ -169,7 +169,7 @@
         </li>
     @endcan
 @endif
-@can('manage_medicines')
+{{-- @can('manage_medicines')
     <li
         class="nav-item {{ Request::is('admin/categories*', 'admin/brands*', 'admin/medicines*', 'admin/medicine-purchase*', 'admin/used-medicine*', 'admin/medicine-bills*') ? 'active' : '' }}">
         <a class="nav-link d-flex align-items-center py-4" aria-current="page"
@@ -184,7 +184,7 @@
             <span class="d-none">{{ __('messages.medicine_bills.medicine_bills') }}</span>
         </a>
     </li>
-@endcan
+@endcan --}}
 @if (!isRole('doctor') && !isRole('patient'))
     @can('manage_transactions')
         <li class="nav-item {{ Request::is('admin/transactions*') ? 'active' : '' }}">

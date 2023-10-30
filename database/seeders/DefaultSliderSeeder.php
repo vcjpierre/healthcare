@@ -14,8 +14,8 @@ class DefaultSliderSeeder extends Seeder
     {
         $inputs = [
             [
-                'title' => 'We Provide All Health Care Solution',
-                'short_description' => 'Protect Your Health And Take Care To Of Your Health',
+                'title' => 'Programe sus citas médicas 100% en línea',
+                'short_description' => 'Agende sus citas de forma rápida y sencilla',
                 'image' => ('assets/front/images/home/home-page-image.png'),
                 'is_default' => true,
             ],

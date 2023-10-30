@@ -11,8 +11,8 @@
 
     {{-- Body --}}
     <div>
-        <p>Hello, <b>{{ $name }}</b></p>
-        <p>Your Enquiry Message Received Successfully.</p>
+        <p>Hola, <b>{{ $name }}</b></p>
+        <p>Su mensaje de consulta ha sido recibido correctamente.</p>
     </div>
 
     {{-- Footer --}}

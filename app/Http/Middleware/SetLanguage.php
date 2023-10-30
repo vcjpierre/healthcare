@@ -16,7 +16,7 @@ class SetLanguage
         $localeLanguage = \Session::get('languageName');
 
         if (! isset($localeLanguage)) {
-            \App::setLocale('en');
+            \App::setLocale('es');
         } else {
             \App::setLocale($localeLanguage);
         }

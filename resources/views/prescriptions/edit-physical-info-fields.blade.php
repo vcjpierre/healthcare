@@ -5,30 +5,30 @@
             {{ Form::text('food_allergies', null, ['class' => 'form-control']) }}
         </div>
     </div>
-    <div class="col-md-3">
+    {{-- <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('tendency_bleed', __('messages.prescription.tendency_bleed').(':'), ['class' => 'form-label']) }}
             {{ Form::text('tendency_bleed', null, ['class' => 'form-control']) }}
         </div>
-    </div>
+    </div> --}}
     <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('heart_disease', __('messages.prescription.heart_disease').(':'), ['class' => 'form-label']) }}
             {{ Form::text('heart_disease', null, ['class' => 'form-control']) }}
         </div>
     </div>
-    <div class="col-md-3">
+    {{-- <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('high_blood_pressure', __('messages.prescription.high_blood_pressure').(':'), ['class' => 'form-label']) }}
             {{ Form::text('high_blood_pressure', null, ['class' => 'form-control']) }}
         </div>
-    </div>
-    <div class="col-md-3">
+    </div> --}}
+    {{-- <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('diabetic', __('messages.prescription.diabetic').(':'), ['class' => 'form-label']) }}
             {{ Form::text('diabetic', null, ['class' => 'form-control']) }}
         </div>
-    </div>
+    </div> --}}
     <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('surgery', __('messages.prescription.surgery').(':'), ['class' => 'form-label']) }}
@@ -59,18 +59,18 @@
             {{ Form::text('current_medication', null, ['class' => 'form-control']) }}
         </div>
     </div>
-    <div class="col-md-3">
+    {{-- <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('female_pregnancy', __('messages.prescription.female_pregnancy').(':'), ['class' => 'form-label']) }}
             {{ Form::text('female_pregnancy', null, ['class' => 'form-control']) }}
         </div>
-    </div>
-    <div class="col-md-3">
+    </div> --}}
+    {{-- <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('breast_feeding', __('messages.prescription.breast_feeding').(':'), ['class' => 'form-label mb-3']) }}
             {{ Form::text('breast_feeding', null, ['class' => 'form-control']) }}
         </div>
-    </div>
+    </div> --}}
     <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('plus_rate', __('messages.prescription.plus_rate').(':'), ['class' => 'form-label']) }}

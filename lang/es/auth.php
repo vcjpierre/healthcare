@@ -56,7 +56,7 @@ return [
     'app' => [
         'member_since' => 'Miembro desde',
         'messages' => 'Mensajes',
-        'settings' => 'Configuración',
+        'settings' => 'Ajustes',
         'lock_account' => 'Bloquear cuenta',
         'profile' => 'Perfil',
         'online' => 'En línea',

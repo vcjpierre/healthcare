@@ -21,7 +21,7 @@
                     <label for="email" class="form-label">
                         {{ __('messages.patient.email').':' }}<span class="required"></span>
                     </label>
-                    <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" required placeholder="Enter Email">
+                    <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" required placeholder="Ingresa tu email">
                 </div>
 
                 <div class="mb-sm-7 mb-4">
@@ -34,12 +34,12 @@
                             </a>
                         @endif
                     </div>
-                    <input name="password" type="password" class="form-control" id="password" required placeholder="Enter Password">
+                    <input name="password" type="password" class="form-control" id="password" required placeholder="Ingrese su contraseña">
                 </div>
 
                 <div class="mb-sm-7 mb-4 form-check">
                     <input type="checkbox" class="form-check-input" id="remember_me">
-                    <label class="form-check-label" for="remember_me">{{ __('messages.common.remember_me') }}</label>
+                    <label class="form-check-label" for="remember_me">{{ __('messages.web.remember_me') }}</label>
                 </div>
                 <div class="d-grid">
                     <button type="submit" class="btn btn-primary">{{ __('messages.login') }}</button>

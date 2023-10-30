@@ -8,10 +8,10 @@
 
     {{-- Body --}}
     <div>
-        <h2>Hello, <b>{{ $name }}</b></h2>
-        <p><b>{{ $patientName }}</b>  Booked appointment with you with service <b>{{$service}}</b>.</p>
-        <p><b>Appointment Time : </b>{{ $date }} - {{ $time }}</p>
-        <p>Thanks & Regards,</p>
+        <h2>Hola, <b>{{ $name }}</b></h2>
+        <p><b>{{ $patientName }}</b>  reservó una cita con el servicio <b>{{$service}}</b>.</p>
+        <p><b>Hora de la cita: </b>{{ $date }} - {{ $time }}</p>
+        <p>Gracias y saludos cordiales,</p>
         <p>{{ getAppName() }}</p>
     </div>
 

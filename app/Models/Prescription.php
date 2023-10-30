@@ -151,9 +151,9 @@ class Prescription extends Model
     const INACTIVE = 0;
 
     const STATUS_ARR = [
-        self::STATUS_ALL => 'All',
-        self::ACTIVE => 'Active',
-        self::INACTIVE => 'Deactive',
+        self::STATUS_ALL => 'Todos',
+        self::ACTIVE => 'Activo',
+        self::INACTIVE => 'Desactivado',
     ];
 
     const DAYS = 0;
@@ -163,9 +163,9 @@ class Prescription extends Model
     const YEAR = 2;
 
     const TIME_ARR = [
-        self::DAYS => 'Days',
-        self::MONTH => 'Month',
-        self::YEAR => 'Years',
+        self::DAYS => 'Días',
+        self::MONTH => 'Mes',
+        self::YEAR => 'Años',
     ];
 
     const AFETR_MEAL = 0;
@@ -173,8 +173,8 @@ class Prescription extends Model
     const BEFORE_MEAL = 1;
 
     const MEAL_ARR = [
-        self::AFETR_MEAL => 'After Meal',
-        self::BEFORE_MEAL => 'Before Meal',
+        self::AFETR_MEAL => 'Después de comer',
+        self::BEFORE_MEAL => 'Antes de comer',
     ];
 
     const ONE_TIME = 1;
@@ -187,10 +187,10 @@ class Prescription extends Model
 
     const DOSE_INTERVAL = [
 
-        self::ONE_TIME => 'Every Morning',
-        self::TWO_TIME => 'Every Morning & Evening',
-        self::THREE_TIME => 'Three times a day',
-        self::FOUR_TIME => '4 times a day',
+        self::ONE_TIME => 'Cada mañana',
+        self::TWO_TIME => 'Todas las mañanas y noches',
+        self::THREE_TIME => 'Tres veces al día',
+        self::FOUR_TIME => 'Cuatro veces al día',
     ];
 
     const ONE_DAY = 1;
@@ -204,11 +204,11 @@ class Prescription extends Model
     const ONE_MONTH = 30;
 
     const DOSE_DURATION = [
-        self::ONE_DAY => 'One day only',
-        self::THREE_DAY => 'For Three days',
-        self::ONE_WEEK => 'For One week',
-        self::TWO_WEEK => 'For 2 weeks',
-        self::ONE_MONTH => 'For 1 Month',
+        self::ONE_DAY => 'Un solo día',
+        self::THREE_DAY => 'Por tres días',
+        self::ONE_WEEK => 'Por una semana',
+        self::TWO_WEEK => 'Por dos semana',
+        self::ONE_MONTH => 'Por un mes',
     ];
 
     public function patient(): BelongsTo

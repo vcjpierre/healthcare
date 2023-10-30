@@ -10,7 +10,7 @@
                 <a href="{{route('doctors.show', $row->doctor_id)}}" class="mb-1 text-decoration-none fs-6">
                     {{$row->doctor->user->full_name}}
                 </a>
-                <div class="mb-1 star-ratings d-flex align-self-center ms-2">
+                {{-- <div class="mb-1 star-ratings d-flex align-self-center ms-2">
                     @if($row->doctor->reviews->avg('rating') != 0)
                         @php
                             $rating = $row->doctor->reviews->avg('rating');
@@ -34,7 +34,7 @@
                             <i class="far fa-star review-star"></i>
                         @endforeach
                     @endif
-                </div>
+                </div> --}}
             </div>
         </div>
         <span class="fs-6">{{$row->doctor->user->email}}</span>

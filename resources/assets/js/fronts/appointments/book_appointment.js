@@ -439,7 +439,7 @@ listenSubmit("#frontAppointmentBook", function (e) {
                 $(window).scrollTop($(".appointment-form").offset().top);
                 $("#frontAppointmentBook")[0].reset();
 
-                if (result.data.payment_type == manually) {
+                if (result.data.payment_type == efectivo) {
                     Turbo.visit(
                         route("manually-payment", {
                             appointmentId: appointmentID,
@@ -541,7 +541,7 @@ listenSubmit("#frontAppointmentBook", function (e) {
                         });
                 }
 
-                if (result.data === manually) {
+                if (result.data === efectivo) {
                     setTimeout(function () {
                         location.reload();
                     }, 1200);

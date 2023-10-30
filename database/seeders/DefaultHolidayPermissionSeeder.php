@@ -17,7 +17,7 @@ class DefaultHolidayPermissionSeeder extends Seeder
         $roles = [
             [
                 'name' => 'clinic_admin',
-                'display_name' => 'Clinic Admin',
+                'display_name' => 'Admin',
                 'is_default' => true,
             ],
             [
@@ -36,7 +36,7 @@ class DefaultHolidayPermissionSeeder extends Seeder
 
         $permission = [
             'name' => 'manage_doctors_holiday',
-            'display_name' => 'Manage Doctors Holiday',
+            'display_name' => 'Gestionar las vacaciones de los médicos',
             'guard_name' => 'web',
         ];
 

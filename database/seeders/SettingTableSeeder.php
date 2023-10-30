@@ -15,16 +15,16 @@ class SettingTableSeeder extends Seeder
         $logoUrl = ('assets/image/infycare-logo.png');
         $favicon = ('assets/image/infyCare-favicon.ico');
 
-        Setting::create(['key' => 'clinic_name', 'value' => 'Clinic Appointment Management']);
+        Setting::create(['key' => 'clinic_name', 'value' => 'Healthcare']);
         Setting::create(['key' => 'contact_no', 'value' => '1234567890']);
-        Setting::create(['key' => 'email', 'value' => 'infycare@email.com']);
+        Setting::create(['key' => 'email', 'value' => 'healthcare@email.com']);
         Setting::create(['key' => 'specialities', 'value' => '1']);
         Setting::create(['key' => 'currency', 'value' => '1']);
         Setting::create([
-            'key' => 'address_one', 'value' => 'C-303, Atlanta Shopping Mall, Nr. Sudama Chowk, Mota Varachha, Surat, Gujarat, India.',
+            'key' => 'address_one', 'value' => 'Santa Cruz de la Sierra, Bolivia.',
         ]);
         Setting::create([
-            'key' => 'address_two', 'value' => 'C-303, Atlanta Shopping Mall, Nr. Sudama Chowk, Mota Varachha, Surat, Gujarat, India.',
+            'key' => 'address_two', 'value' => 'Santa Cruz de la Sierra, Bolivia.',
         ]);
         Setting::create(['key' => 'country_id', 'value' => '101']);
         Setting::create(['key' => 'state_id', 'value' => '12']);

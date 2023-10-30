@@ -58,7 +58,7 @@
                     <div class="mb-sm-7 mb-4 form-check">
                         <input type="checkbox" class="form-check-input" name="toc" value="1" required/>
                         <span class="text-gray-700 me-2 ml-1">{{__('messages.web.i_agree')}}
-									<a href="{{ route('terms.conditions') }}"
+									<a href="#"
                                        class="ms-1 link-primary">{{__('messages.web.terms_and_conditions')}}</a>.
                         </span>
                     </div>

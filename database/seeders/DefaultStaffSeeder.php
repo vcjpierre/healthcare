@@ -17,12 +17,12 @@ class DefaultStaffSeeder extends Seeder
     public function run(): void
     {
         $input = [
-            'first_name' => 'John',
-            'last_name' => 'Doe',
+            'first_name' => 'Maria',
+            'last_name' => 'Smith',
             'contact' => '1234567890',
-            'gender' => User::MALE,
+            'gender' => User::FEMALE,
             'type' => User::STAFF,
-            'email' => 'john@gamil.com',
+            'email' => 'john@email.com',
             'email_verified_at' => Carbon::now(),
             'password' => Hash::make('123456'),
             'region_code' => '91',
@@ -31,7 +31,7 @@ class DefaultStaffSeeder extends Seeder
         $user = User::create($input);
 
         /** @var Role $staffRole */
-        $staffRole = Role::create(['name' => 'staff', 'display_name' => 'Staff']);
+        $staffRole = Role::create(['name' => 'staff', 'display_name' => 'Personal']);
         $user->assignRole($staffRole);
 
         /** @var Permission $allPermission */

@@ -14,40 +14,34 @@ class DefaultSpecializationSeeder extends Seeder
     {
         $input = [
             [
-                'name' => 'Marine Medicine',
+                'name' => 'Anestesiologo pediatrico',
             ],
             [
-                'name' => 'Medical Genetics',
+                'name' => 'Cardiologo pediatrico',
             ],
             [
-                'name' => 'Microbiology',
+                'name' => 'Dentista pediatrico',
             ],
             [
-                'name' => 'Nuclear Medicine',
+                'name' => 'Neurologo infantil',
             ],
             [
-                'name' => 'Paediatrics',
+                'name' => 'Oncologo pediatrico',
             ],
             [
-                'name' => 'Palliative Medicine',
+                'name' => 'Neumólogo pediatrico',
             ],
             [
-                'name' => 'Pathology',
+                'name' => 'Hematólogo',
             ],
             [
-                'name' => 'Pharmacology',
+                'name' => 'Nefrólogo',
             ],
             [
-                'name' => 'Psychiatry',
+                'name' => 'Endocrino',
             ],
             [
-                'name' => 'Physiology',
-            ],
-            [
-                'name' => 'Physical Medicine',
-            ],
-            [
-                'name' => 'Radiotherapy',
+                'name' => 'Otorrinolaringólogo',
             ],
         ];
 

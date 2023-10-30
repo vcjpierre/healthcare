@@ -1,10 +1,10 @@
 <div class="d-flex justify-content-center">
     @if($row->status !== $cancel && $row->status !== $checkOut)
-    <a href="{{ route('patients.appointmentPdf', $row->id) }}" target="_blank"
+    {{-- <a href="{{ route('patients.appointmentPdf', $row->id) }}" target="_blank"
         class="btn px-1 text-primary fs-3" data-bs-toggle="tooltip"
         data-bs-original-title="{{ __('download') }}">
         <i class="fa fa-download" aria-hidden="true"></i>
-    </a>
+    </a> --}}
 
         <a href="javascript:void(0)" data-id="{{$row->id}}"
            class="btn px-1 text-danger fs-3 edit-btn patient-cancel-appointment" data-bs-toggle="tooltip"

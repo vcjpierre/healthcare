@@ -20,18 +20,18 @@
             {{ Form::text('health_insurance', null, ['class' => 'form-control']) }}
         </div>
     </div>
-    <div class="col-md-3">
+    {{-- <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('low_income', __('messages.prescription.low_income') . ':', ['class' => 'form-label']) }}
             {{ Form::text('low_income', null, ['class' => 'form-control']) }}
         </div>
-    </div>
-    <div class="col-md-3">
+    </div> --}}
+    {{-- <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('reference', __('messages.prescription.reference') . ':', ['class' => 'form-label']) }}
             {{ Form::text('reference', null, ['class' => 'form-control']) }}
         </div>
-    </div>
+    </div> --}}
     <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('status', __('messages.web.status') . ':', ['class' => 'form-label']) }}
