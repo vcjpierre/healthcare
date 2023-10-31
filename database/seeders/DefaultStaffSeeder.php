@@ -31,7 +31,7 @@ class DefaultStaffSeeder extends Seeder
         $user = User::create($input);
 
         /** @var Role $staffRole */
-        $staffRole = Role::create(['name' => 'staff', 'display_name' => 'Personal']);
+        $staffRole = Role::create(['name' => 'staff', 'display_name' => 'Staff']);
         $user->assignRole($staffRole);
 
         /** @var Permission $allPermission */

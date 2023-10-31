@@ -16,7 +16,7 @@ class PatientFactory extends Factory
 
     public function definition(): array
     {
-        static $user_id = 7;
+        static $user_id = 82;
 
         return [
             //'user_id' => $this->faker->unique()->numberBetween(7, 1000),
