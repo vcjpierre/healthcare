@@ -122,7 +122,7 @@ class UserController extends AppBaseController
     public function edit(Doctor $doctor): \Illuminate\View\View
     {
         $user = $doctor->user()->first();
-        $qualifications = $user->qualifications()->get();
+        // $qualifications = $user->qualifications()->get();
         $data = $this->userRepo->getSpecializationsData($doctor);
         $bloodGroup = Doctor::BLOOD_GROUP_ARRAY;
         $countries = $this->userRepo->getCountries();
@@ -140,7 +140,7 @@ class UserController extends AppBaseController
         }
 
         return view('doctors.edit',
-            compact('user', 'qualifications', 'data', 'doctor', 'countries', 'state', 'cities', 'years', 'bloodGroup'));
+            compact('user', 'data', 'doctor', 'countries', 'state', 'cities', 'years', 'bloodGroup'));
     }
 
     /**

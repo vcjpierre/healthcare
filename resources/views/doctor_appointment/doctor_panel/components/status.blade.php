@@ -3,23 +3,23 @@
     <select class="io-select2 form-select doctor-appointment-status-change appointment-status" style="min-width: 150px; max-width:150px;"
             data-id="{{$row->id}}">
         <option class="booked" disabled value="{{ $book}}" {{$row->status ==
-                    $book ? 'selected' : ''}}>{{__('messages.common.'.strtolower(\App\Models\Appointment::STATUS[1]))}}
+                    $book ? 'selected' : ''}}>Reservado
         </option>
         <option value="{{ $checkIn}}" {{$row->status ==
                     $checkIn ? 'selected' : ''}} {{$row->status == $checkIn
             ? 'selected'
             : ''}} {{( $row->status == $cancel || $row->status == $checkOut)
             ? 'disabled'
-            : ''}}>{{__('messages.common.'.strtolower(\App\Models\Appointment::STATUS[2]))}}
+            : ''}}>Check in
         </option>
         <option value="{{ $checkOut}}" {{$row->status ==
                     $checkOut ? 'selected' : ''}} {{($row->status == $cancel ||
-            $row->status == $book) ? 'disabled' : ''}}>{{__('messages.common.'.strtolower(\App\Models\Appointment::STATUS[3]))}}
+            $row->status == $book) ? 'disabled' : ''}}>Check out
         </option>
         <option value="{{$cancel}}" {{$row->status ==
                     $cancel ? 'selected' : ''}} {{$row->status == $checkIn
             ? 'disabled'
-            : ''}} {{$row->status == $checkOut ? 'disabled' : ''}}>{{__('messages.common.'.strtolower(\App\Models\Appointment::STATUS[4]))}}
+            : ''}} {{$row->status == $checkOut ? 'disabled' : ''}}>Cancelado
         </option>
     </select>
 </div>

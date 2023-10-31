@@ -127,7 +127,7 @@ class DoctorPanelAppointmentTable extends LivewireTableComponent
                     return view('doctor_appointment.doctor_panel.components.payment')
                         ->with([
                             'row' => $row,
-                            'paid' => Appointment::PAID,
+                            'paid' => 'Appointment::PAID',
                             'pending' => Appointment::PENDING,
                         ]);
                 }),

@@ -14,7 +14,7 @@
             @include('layouts.errors')
         </div>
         <div class="card">
-            {{Form::hidden('qualification',$qualifications,['id' => 'qualificationData'])}}
+            {{-- {{Form::hidden('qualification',$qualifications,['id' => 'qualificationData'])}} --}}
             <div class="card-body">
                 {{ Form::open(['route' => ['doctors.update',$user->doctor->id], 'method' => 'Patch', 'files' => true,'id'=> 'editDoctorForm']) }}
                 {{ Form::hidden('user_id', $doctor->id,['id' => 'editDoctorId']) }}

@@ -44,11 +44,11 @@
                 </div>
             </span>
     </div>
-    <div class="col-md-6 mb-5">
+    {{-- <div class="col-md-6 mb-5">
         <label class="form-label">{{ __('messages.patient.blood_group').':' }}</label>
         {{ Form::select('blood_group', $bloodGroup , $user->blood_group, ['class' => 'io-select2 form-select', 'data-control'=>"select2",'placeholder' => __('messages.doctor.select_blood_group')]) }}
-    </div>
-    <div class="col-md-6 mb-5">
+    </div> --}}
+    {{-- <div class="col-md-6 mb-5">
         {{ Form::label('twitter',__('messages.doctor.twitter').':' ,['class' => 'form-label']) }}
         {{ Form::text('twitter_url', !empty($doctor->twitter_url) ? $doctor->twitter_url : null,['class' => 'form-control','placeholder' =>  __('messages.common.twitter_url'),'id' => 'twitterUrl']) }}
     </div>
@@ -59,7 +59,7 @@
     <div class="col-md-6 mb-5">
         {{ Form::label('instagram',__('messages.doctor.instagram').':' ,['class' => 'form-label']) }}
         {{ Form::text('instagram_url', !empty($doctor->instagram_url) ? $doctor->instagram_url : null,['class' => 'form-control','placeholder' =>  __('messages.common.instagram_url'), 'id' => 'instagramUrl']) }}
-    </div>
+    </div> --}}
     <div class="col-md-6 mb-5">
         <div class="mb-3" io-image-input="true">
             <label for="exampleInputImage" class="form-label">{{__('messages.doctor.profile')}}:</label>
@@ -116,7 +116,7 @@
         {{ Form::text('postal_code', isset($user->address->postal_code) ? $user->address->postal_code : '', ['class' => 'form-control', 'placeholder' => __('messages.doctor.postal_code')]) }}
     </div>
 </div>
-<div>
+{{-- <div>
     <div class="fw-bolder fs-3 rotate collapsible mb-4">{{ __('messages.doctor.qualification_information') }}
     </div>
     <a class="btn btn-primary float-end mb-4" id="addQualification">{{__('messages.doctor.add_qualification')}}</a>
@@ -177,7 +177,7 @@
         @endforeach
         </tbody>
     </table>
-</div>
+</div> --}}
 <div class="d-flex mt-4">
     <button type="submit" class="btn btn-primary">{{__('messages.common.save')}}</button>&nbsp;&nbsp;&nbsp;
     <a href="{{route('doctors.index')}}" type="reset" id="ResetForm"
