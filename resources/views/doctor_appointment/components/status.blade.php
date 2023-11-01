@@ -12,16 +12,16 @@
             ? 'selected'
             : ''}} {{( $row->status == $cancel || $row->status == $checkOut)
             ? 'disabled'
-            : ''}}>{{__('messages.common.'.strtolower(\App\Models\Appointment::STATUS[2]))}}
+            : ''}}>{{__(\App\Models\Appointment::STATUS[2])}}
         </option>
         <option value="{{ $checkOut}}" {{$row->status ==
                     $checkOut ? 'selected' : ''}} {{($row->status == $cancel ||
-            $row->status == $book) ? 'disabled' : ''}}>{{__('messages.common.'.strtolower(\App\Models\Appointment::STATUS[3]))}}
+            $row->status == $book) ? 'disabled' : ''}}>{{__(\App\Models\Appointment::STATUS[3])}}
         </option>
         <option value="{{$cancel}}" {{$row->status ==
                     $cancel ? 'selected' : ''}} {{$row->status == $checkIn
             ? 'disabled'
-            : ''}} {{$row->status == $checkOut ? 'disabled' : ''}}>{{__('messages.common.'.strtolower(\App\Models\Appointment::STATUS[4]))}}
+            : ''}} {{$row->status == $checkOut ? 'disabled' : ''}}>{{__(\App\Models\Appointment::STATUS[4])}}
         </option>
     </select>
 </div>

@@ -28,19 +28,19 @@
                             <div class="d-flex align-items-center flex-wrap">
                                 <div class="d-flex me-4 mb-1">
                                 <span class="badge bg-primary badge-circle me-1 slot-color-dot"></span>
-                                <span class="">{{__('messages.common.'.strtolower(\App\Models\Appointment::STATUS[1]))}}</span>
+                                <span class="">{{__(\App\Models\Appointment::STATUS[1] )}}</span>
                             </div>
                             <div class="d-flex me-4 mb-1">
                                 <span class="badge bg-success badge-circle me-1 slot-color-dot"></span>
-                                <span class="">{{__('messages.common.'.strtolower(\App\Models\Appointment::STATUS[2]))}}</span>
+                                <span class="">{{__(\App\Models\Appointment::STATUS[2] )}}</span>
                             </div>
                             <div class="d-flex me-4 mb-1">
                                 <span class="badge bg-warning badge-circle me-1 slot-color-dot"></span>
-                                <span class="">{{__('messages.common.'.strtolower(\App\Models\Appointment::STATUS[3]))}}</span>
+                                <span class="">{{__(\App\Models\Appointment::STATUS[3] )}}</span>
                             </div>
                             <div class="d-flex mb-1">
                                 <span class="badge bg-danger badge-circle me-1 slot-color-dot"></span>
-                                <span class="">{{__('messages.common.'.strtolower(\App\Models\Appointment::STATUS[4]))}}</span>
+                                <span class="">{{__(\App\Models\Appointment::STATUS[4] )}}</span>
                             </div>
                             </div>
                         </div>

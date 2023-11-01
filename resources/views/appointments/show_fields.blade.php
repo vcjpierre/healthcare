@@ -38,7 +38,7 @@
                             <label for="name" class="pb-2 fs-4 text-gray-600">{{ __('messages.doctor.status') }}:</label>
                             <span class="fs-4 text-gray-800">
                                 <span class="badge bg-{{ getStatusBadgeColor($appointment['data']->status)}}">
-                                    {{__('messages.common.'.strtolower(\App\Models\Appointment::STATUS[$appointment['data']->status]))}}
+                                    {{__(\App\Models\Appointment::STATUS[$appointment['data']->status])}}
                                 </span>
                             </span>
                         </div>
