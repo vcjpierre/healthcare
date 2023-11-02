@@ -33,6 +33,12 @@
         href="{{ asset('assets/css/bootstrap-datepicker/bootstrap-datepicker.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/intlTelInput.css') }}">
 
+    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script> --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+
+
     <!-- Document Title ===================== -->
     <title>@yield('front-title') | {{ getAppName() }}</title>
     <script src="{{ asset('messages.js') }}"></script>
@@ -110,5 +116,4 @@
     @yield('front-content')
     @include('fronts.layouts.footer')
 </body>
-
 </html>

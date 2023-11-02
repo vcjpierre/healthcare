@@ -32,6 +32,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Session;
 use Stripe\Exception\ApiErrorException;
 use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 
@@ -76,62 +77,7 @@ class AppointmentController extends AppBaseController
     {
         $input = $request->all();
         $appointment = $this->appointmentRepository->store($input);
-
-        if ($input['payment_type'] == Appointment::STRIPE) {
-            $result = $this->appointmentRepository->createSession($appointment);
-
-            return $this->sendResponse([
-                'appointmentId' => $appointment->id,
-                'payment_type' => $input['payment_type'],
-                $result,
-            ], 'Stripe '.__('messages.appointment.session_created_successfully'));
-        }
-
-        if ($input['payment_type'] == Appointment::PAYSTACK) {
-            if ($request->isXmlHttpRequest()) {
-                return $this->sendResponse([
-                    'redirect_url' => route('paystack.init', ['appointmentData' => $appointment]),
-                    'payment_type' => $input['payment_type'],
-                    'appointmentId' => $appointment->id,
-                ], 'Paystack '.__('messages.appointment.session_created_successfully'));
-            }
-
-            return redirect(route('paystack.init'));
-        }
-
-        if ($input['payment_type'] == Appointment::PAYPAL) {
-            if ($request->isXmlHttpRequest()) {
-                return $this->sendResponse([
-                    'redirect_url' => route('paypal.index', ['appointmentData' => $appointment]),
-                    'payment_type' => $input['payment_type'],
-                    'appointmentId' => $appointment->id,
-                ], 'Paypal '.__('messages.appointment.session_created_successfully'));
-            }
-
-            return redirect(route('paypal.init'));
-        }
-
-        if ($input['payment_type'] == Appointment::RAZORPAY) {
-            return $this->sendResponse([
-                'payment_type' => $input['payment_type'],
-                'appointmentId' => $appointment->id,
-            ], 'Razorpay '.__('messages.appointment.session_created_successfully'));
-        }
-
-        if ($input['payment_type'] == Appointment::AUTHORIZE) {
-            return $this->sendResponse([
-                'payment_type' => $input['payment_type'],
-                'appointmentId' => $appointment->id,
-            ], 'Authorize '.__('messages.appointment.session_created_successfully'));
-        }
-
-        if ($input['payment_type'] == Appointment::PAYTM) {
-            return $this->sendResponse([
-                'payment_type' => $input['payment_type'],
-                'appointmentId' => $appointment->id,
-            ], 'Paytm '.__('messages.appointment.session_created_successfully'));
-        }
-
+                                    
         $url = route('appointments.index');
 
         if (getLogInUser()->hasRole('patient')) {
@@ -143,7 +89,9 @@ class AppointmentController extends AppBaseController
             'appointmentId' => $appointment->id,
         ];
 
-        return $this->sendResponse($data, __('messages.flash.appointment_create'));
+        Session::flash('success', __('Cita creada correctamente.'));
+
+        return $this->sendResponse($data);
     }
 
     /**
@@ -375,61 +323,14 @@ class AppointmentController extends AppBaseController
         app()->setLocale(checkLanguageSession());
         $input = $request->all();
         $appointment = $this->appointmentRepository->frontSideStore($input);
-        if ($input['payment_type'] == Appointment::STRIPE) {
-            $result = $this->appointmentRepository->createSession($appointment);
 
-            return $this->sendResponse([
-                'payment_type' => $input['payment_type'],
-                $result,
-            ], 'Stripe '.__('messages.appointment.session_created_successfully'));
-        }
-
-        if ($input['payment_type'] == Appointment::PAYPAL) {
-            if ($request->isXmlHttpRequest()) {
-                return $this->sendResponse([
-                    'redirect_url' => route('paypal.index', ['appointmentData' => $appointment]),
-                    'payment_type' => $input['payment_type'],
-                    'appointmentId' => $appointment->id,
-                ], 'Paypal '.__('messages.appointment.session_created_successfully'));
-            }
-        }
-
-        if ($input['payment_type'] == Appointment::PAYSTACK) {
-            if ($request->isXmlHttpRequest()) {
-                return $this->sendResponse([
-                    'redirect_url' => route('paystack.init', ['appointmentData' => $appointment]),
-                    'payment_type' => $input['payment_type'],
-                ], 'Paystck '.__('messages.appointment.session_created_successfully'));
-            }
-
-            return redirect(route('paystack.init'));
-        }
-
-        if ($input['payment_type'] == Appointment::RAZORPAY) {
-            return $this->sendResponse([
-                'payment_type' => $input['payment_type'],
-                'appointmentId' => $appointment->id,
-            ], 'Razorpay '.__('messages.appointment.session_created_successfully'));
-        }
-
-        if ($input['payment_type'] == Appointment::PAYTM) {
-            return $this->sendResponse([
-                'payment_type' => $input['payment_type'],
-                'appointmentId' => $appointment->id,
-            ], 'Paytm '.__('messages.appointment.session_created_successfully'));
-        }
-
-        if ($input['payment_type'] == Appointment::AUTHORIZE) {
-            return $this->sendResponse([
-                'payment_type' => $input['payment_type'],
-                'appointmentId' => $appointment->id,
-            ], 'Authorize session created successfully.');
-        }
-
-        $data['payment_type'] = $input['payment_type'];
         $data['appointmentId'] = $appointment->id;
+        $message = __('messages.flash.appointment_booked');
 
-        return $this->sendResponse($data, __('messages.flash.appointment_booked'));
+        // Add a Toastr success message
+        // Session::flash('success', $message);
+
+        return $this->sendResponse($data, $message);
     }
 
     public function frontHomeAppointmentBook(Request $request): RedirectResponse

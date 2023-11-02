@@ -5,7 +5,7 @@
             data-control="select2"
             data-id="{{$row->id}}">
         <option class="booked" disabled value="{{ $book}}" {{$row->status ==
-                    $book ? 'selected' : ''}}>{{__('messages.common.'.strtolower(\App\Models\Appointment::STATUS[1]))}}
+                    $book ? 'selected' : ''}}>{{__(\App\Models\Appointment::STATUS[1])}}
         </option>
         <option value="{{ $checkIn}}" {{$row->status ==
                     $checkIn ? 'selected' : ''}} {{$row->status == $checkIn

@@ -191,7 +191,7 @@ class Appointment extends Model
         'patient_id' => 'required',
         'date' => 'required',
         'service_id' => 'required',
-        'payable_amount' => 'required',
+        // 'payable_amount' => 'required',
         'from_time' => 'required',
         'to_time' => 'required',
         'payment_type' => 'required',
